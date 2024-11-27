@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore an exquisite collection of curated artworks at Sleek Art Gallery.">
+  <title>Sleek Art Gallery</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+ <header>
+  <nav class="topbar">
+    <div class="logo">
+      <h1><a href="#home" aria-label="Go to Home">Sleek Art</a></h1>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-item" aria-label="Go to Home">Home</a></li>
+      <li><a href="#gallery" class="nav-item" aria-label="View the Gallery">Gallery</a></li>
+      <li><a href="#about" class="nav-item" aria-label="Learn About Us">About Us</a></li>
+      <li><a href="#contact" class="nav-item" aria-label="Contact Us">Contact</a></li>
+      <li>
+        <a href="#cart" class="nav-item" aria-label="View Your Cart">
+          Cart 🛒<span id="cart-count">0</span>
+        </a>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
+  </nav>
+</header>
+
+
+ <!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-parallax"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2 class="hero-title">Unleash the Power of Art</h2>
+    <p class="hero-subtitle">Where creativity meets inspiration, every piece tells a story.</p>
+    <a href="#gallery" class="btn hero-btn" aria-label="Explore Gallery">Dive Into Art</a>
+  </div>
+</section>
+
+
+
+  <section id="gallery" class="gallery">
+  <div class="container">
+    <h2 class="section-title">Explore Our Featured Artworks</h2>
+    <p class="section-subtitle">
+      Discover a diverse collection of curated masterpieces from talented artists worldwide.
+    </p>
+    <div class="filter-controls">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="paintings">Paintings</button>
+      <button class="filter-btn" data-category="sculptures">Sculptures</button>
+      <button class="filter-btn" data-category="photography">Photography</button>
+    </div>
+    <div class="art-grid" id="art-grid" aria-live="polite">
+      <!-- Example Artworks (Dynamically Loaded in Actual Use) -->
+      <div class="art-item" data-category="paintings">
+        <img src="assets/art1.jpg" alt="Abstract Painting" class="art-image">
+        <div class="art-info">
+          <h3 class="art-title">Abstract Colors</h3>
+          <p class="art-artist">by Jane Doe</p>
+        </div>
+      </div>
+      <div class="art-item" data-category="sculptures">
+        <img src="assets/art2.jpg" alt="Modern Sculpture" class="art-image">
+        <div class="art-info">
+          <h3 class="art-title">Ethereal Form</h3>
+          <p class="art-artist">by John Smith</p>
+        </div>
+      </div>
+      <!-- More artwork items here -->
+    </div>
+  </div>
+</section>
+
+
+  <section id="about" class="about">
+  <div class="container">
+    <div class="about-header">
+      <h2 class="about-title">About Us</h2>
+      <p class="about-subtitle">
+        We curate a diverse collection of artworks from talented artists worldwide. Our mission is to make art accessible and inspire creativity in every home.
+      </p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          At Sleek Art, we believe that art is not just something to be admired from afar, but something that can be a part of every person's life. From traditional masterpieces to contemporary innovations, we offer an inspiring blend of artworks from renowned artists.
+        </p>
+        <p>
+          Our gallery connects the artist with the admirer, creating an enriching experience for both. Join us as we create a space where art, culture, and creativity come together.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="assets/about-image.jpg" alt="Sleek Art Gallery" class="about-img">
+      </div>
+    </div>
+    <div class="about-mission">
+      <h3>Our Mission</h3>
+      <p>
+        To make art accessible to everyone, everywhere, and to inspire individuals to appreciate and engage with creative expression. We strive to create a vibrant community of artists and art lovers, united by our passion for all things artistic.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="contact">
+  <div class="contact-wrapper">
+    <div class="contact-content">
+      <div class="contact-header">
+        <h2 class="contact-title">Get in Touch with Us</h2>
+        <p class="contact-subtitle">We’d love to hear your thoughts, inquiries, or questions.</p>
+      </div>
+      
+      <!-- Contact Form -->
+      <form id="contact-form" class="contact-form" aria-label="Contact Form">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name">
+          <label for="name">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+          <label for="email">Your Email</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
+          <label for="message">Your Message</label>
+        </div>
+        <button type="submit" class="btn btn-submit" aria-label="Send Message">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+      <h3>Our Location</h3>
+      <p>Visit our gallery at the heart of the city or reach out to us digitally anytime.</p>
+      <div class="contact-details">
+        <p><strong>Email:</strong> contact@sleekart.com</p>
+        <p><strong>Phone:</strong> +1 (234) 567-890</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Information Section -->
+<div class="contact-info">
+  <div class="contact-info-header">
+    <h3>Find Us Here</h3>
+    <p>Whether you're visiting our gallery or reaching out online, we're always happy to connect.</p>
+  </div>
+
+  <div class="contact-info-content">
+    <div class="contact-info-item">
+      <div class="contact-icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div class="contact-details">
+        <h4>Gallery Location</h4>
+        <p>123 Art Street, Downtown City, ABC</p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="contact-details">
+        <h4>Email Us</h4>
+        <p><a href="mailto:contact@sleekart.com">contact@sleekart.com</a></p>
+      </div>
+    </div>
+
+    <div class="contact-info-item">
+      <div class="contact-icon">
+        <i class="fas fa-phone-alt"></i>
+      </div>
+      <div class="contact-details">
+        <h4>Call Us</h4>
+        <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Cart Section -->
+<section id="cart" class="cart">
+  <div class="container">
+    <h2>Your Cart</h2>
+    <div id="cart-items" class="cart-items" aria-live="polite">
+      <p>Your cart is currently empty. Start shopping to add items.</p>
+    </div>
+    <div id="cart-total" class="cart-total">
+      <!-- Total will be dynamically updated -->
+    </div>
+    <div class="cart-actions">
+      <button class="btn" id="checkout-btn" aria-label="Proceed to Checkout">Proceed to Checkout</button>
+      <button class="btn clear-btn" id="clear-cart-btn" aria-label="Clear Cart">Clear Cart</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Sleek Art. All rights reserved.</p>
+    <div class="socials">
+      <a href="#" aria-label="Check our Instagram" class="social-icon">
+        <img src="assets/instagram.svg" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
