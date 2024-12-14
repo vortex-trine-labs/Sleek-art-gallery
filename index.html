@@ -24,11 +24,6 @@
       <li><a href="#gallery" class="nav-item" aria-label="View the Gallery">Gallery</a></li>
       <li><a href="#about" class="nav-item" aria-label="Learn About Us">About Us</a></li>
       <li><a href="#contact" class="nav-item" aria-label="Contact Us">Contact</a></li>
-      <li>
-        <a href="#cart" class="nav-item" aria-label="View Your Cart">
-          Cart 🛒<span id="cart-count">0</span>
-        </a>
-      </li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
       <span class="line"></span>
@@ -51,40 +46,39 @@
 </section>
 
 
-
-  <section id="gallery" class="gallery">
+<section id="gallery" class="gallery">
   <div class="container">
     <h2 class="section-title">Explore Our Featured Artworks</h2>
     <p class="section-subtitle">
       Discover a diverse collection of curated masterpieces from talented artists worldwide.
     </p>
+    <!-- Filter Buttons -->
     <div class="filter-controls">
       <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="paintings">Paintings</button>
-      <button class="filter-btn" data-category="sculptures">Sculptures</button>
-      <button class="filter-btn" data-category="photography">Photography</button>
+      <button class="filter-btn" data-category="classic">Classic</button>
+      <button class="filter-btn" data-category="modern">Modern</button>
+      <button class="filter-btn" data-category="surreal">Surreal</button>
+      <button class="filter-btn" data-category="historic">Historic</button>
+      <button class="filter-btn" data-category="resin-art">Resin Art</button>
+      <button class="filter-btn" data-category="pencil-lead-art">Pencil Lead Art</button>
     </div>
-    <div class="art-grid" id="art-grid" aria-live="polite">
-      <!-- Example Artworks (Dynamically Loaded in Actual Use) -->
-      <div class="art-item" data-category="paintings">
-        <img src="assets/art1.jpg" alt="Abstract Painting" class="art-image">
-        <div class="art-info">
-          <h3 class="art-title">Abstract Colors</h3>
-          <p class="art-artist">by Jane Doe</p>
-        </div>
+    <!-- Artworks -->
+    <div class="art-grid" id="art-grid">
+      <div class="art-item" data-category="2dpencilart">
+        <img src="assets/art3.jpg" alt="2D Pencil Art 1">
       </div>
-      <div class="art-item" data-category="sculptures">
-        <img src="assets/art2.jpg" alt="Modern Sculpture" class="art-image">
-        <div class="art-info">
-          <h3 class="art-title">Ethereal Form</h3>
-          <p class="art-artist">by John Smith</p>
-        </div>
+      <div class="art-item" data-category="minipolorids">
+        <img src="assets/art4.jpg" alt="Mini Polaroid 1">
       </div>
-      <!-- More artwork items here -->
+      <div class="art-item" data-category="mediumpolorids">
+        <img src="assets/art5.jpg" alt="Medium Polaroid 1">
+      </div>
+      <div class="art-item" data-category="polaroidslightkit">
+        <img src="assets/art6.jpg" alt="Polaroid Light Kit 1">
+      </div>
     </div>
   </div>
 </section>
-
 
   <section id="about" class="about">
   <div class="container">
@@ -128,15 +122,15 @@
       <!-- Contact Form -->
       <form id="contact-form" class="contact-form" aria-label="Contact Form">
         <div class="form-group">
-          <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name">
+          <input type="text" id="name" name="name"  required aria-label="Your Name">
           <label for="name">Your Name</label>
         </div>
         <div class="form-group">
-          <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+          <input type="email" id="email" name="email"  required aria-label="Your Email">
           <label for="email">Your Email</label>
         </div>
         <div class="form-group">
-          <textarea id="message" name="message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
+          <textarea id="message" name="message"  rows="5" required aria-label="Your Message"></textarea>
           <label for="message">Your Message</label>
         </div>
         <button type="submit" class="btn btn-submit" aria-label="Send Message">Send Message</button>
@@ -197,23 +191,6 @@
 </div>
 
 
-
-  <!-- Cart Section -->
-<section id="cart" class="cart">
-  <div class="container">
-    <h2>Your Cart</h2>
-    <div id="cart-items" class="cart-items" aria-live="polite">
-      <p>Your cart is currently empty. Start shopping to add items.</p>
-    </div>
-    <div id="cart-total" class="cart-total">
-      <!-- Total will be dynamically updated -->
-    </div>
-    <div class="cart-actions">
-      <button class="btn" id="checkout-btn" aria-label="Proceed to Checkout">Proceed to Checkout</button>
-      <button class="btn clear-btn" id="clear-cart-btn" aria-label="Clear Cart">Clear Cart</button>
-    </div>
-  </div>
-</section>
 
 
   <!-- Footer -->
